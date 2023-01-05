@@ -32,7 +32,8 @@ def checkPrime(n):
         if n % i == 0 or n % i+2 == 0:
             return False
 
-        i += 6 # The numbers between will come under checking divisibility by 2 and 3
+        #i += 6      The numbers between will come under checking divisibility by 2 and 3
+        i += 1       # Can be problematic with 6 so use 1 eg: 49
     
     return True
 
