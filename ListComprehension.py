@@ -1,4 +1,4 @@
-def OddandEven(l):
+def OddandEven(l): # Splits the list into even and odd
 
     l1 = [x for x in l if x % 2 == 0]  # List Comprehension
     l2 = {x for x in l if x % 2 != 0}  # Set Comprehension
