@@ -10,8 +10,8 @@ print(OddandEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 # Dictionary Comprehension
 
-keys = [101, 103, 102]
-values = ['gfg', 'ide', 'corse']
+keys = ["fName", "lName", "fullName"]
+values = ['Tesh', 'Chaudhary', 'Tesh Chaudhary']
 
 d = {keys[i]: values[i] for i in range(len(keys))}
 print(d)
