@@ -10,7 +10,7 @@ def insertionSort(arr):
         ele = arr[i]  # The element of unsorted list
         j = i-1  # Just the left side of the unsorted element i.e in sorted list
         # We'll never go inside this loop if the elements are already sorted
-        while j > 0 and ele < arr[j]:
+        while j >= 0 and ele < arr[j]:
             arr[j+1] = arr[j]
             j -= 1
 
