@@ -1,3 +1,5 @@
+# Method 1
+
 def reverseDLL(head):
     curr = head
     p = None
@@ -11,3 +13,17 @@ def reverseDLL(head):
         curr = curr.prev
     
     return p
+
+# ------------------------------------------------------
+
+# Method 2
+
+def reverseDLL(head):
+    curr = head
+    
+    while curr != None:
+        curr.next, curr.prev = curr.prev, curr.next
+        
+        if curr.prev == None:
+            return curr
+        curr = curr.prev
