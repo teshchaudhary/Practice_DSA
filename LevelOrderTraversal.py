@@ -1,4 +1,4 @@
-
+# Naive Solution
 
 def height(root):
     if root == None:
@@ -19,3 +19,24 @@ def traversal(head):
   h = height(root)
   for i in range(h):
     printkth(root,i,[])
+
+    
+# Efficient Solution
+
+from collections import deque
+
+def levelOrderTraversal(root):
+    if root is None:
+        return
+    q = deque()
+    q.append(root)
+    
+    while len(q) > 0:
+        node = q.popleft()
+        print(node.key)
+        
+        if node.left != None:
+            q.append(root.left)
+            
+        if node.right != None:
+            q.append(root.right)
