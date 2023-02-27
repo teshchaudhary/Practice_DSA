@@ -9,5 +9,5 @@ def conv(n):
 		
 	return num
 
-num = 1010
+num = 1010 # Number should be in binary form
 print(conv(num))
