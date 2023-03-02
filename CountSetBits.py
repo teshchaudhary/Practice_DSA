@@ -12,7 +12,7 @@ def count(n):
 # Brian Kernigam's Algo
 # if n = 40: 101000
 # then (n-1) = 39: 100111
-# n&(n-1 = 32 : 100000
+# n&(n-1) = 32 : 100000
 # All the bits after first set bit becomes 1 
 def count(n):
     res = 0
