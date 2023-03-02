@@ -1,11 +1,11 @@
 def count(n):
-    c = 0
+    res = 0
     while n!=0:
-        if n&1 == 1:
-            c+=1
-    
-        n>>=1
+        # if n&1 == 1:
+        #     c+=1
+        res += n&1
+        n >>= 1
 
-    return c
+    return res
 
 print(count(10))
