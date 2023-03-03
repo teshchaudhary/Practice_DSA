@@ -6,6 +6,6 @@ def OneOddOccuring(arr):
 
 	return num
 
-arr = []
+arr = [1,2,3,1,2]
 
 print(OneOddOccuring(arr))
