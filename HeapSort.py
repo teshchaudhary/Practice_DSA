@@ -1,3 +1,12 @@
+# An optimization over selection sort
+# O(nlog(n))
+# Not Stable
+# Used in hybrid sort like intro sort
+
+# Works in two steps
+# 1.) Build a max heap
+# 2.) Repeatedly swap root element with last node and reduce size of the heap by 1 and heapify
+
 def heapify(self,arr, n, i):
     lt, rt = 2*i+1, 2*i+2
     largest = i
