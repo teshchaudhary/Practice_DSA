@@ -3,7 +3,7 @@
 # AND Operation :   001000
 
 # 10            :   001010
-# n >> 3        :   000001 (right shift 1 by k-1 bits)
+# 10 >> 3        :   000001 (right shift 1 by k-1 bits)
 # 1		:   000001
 # AND Operation :   000001
 
