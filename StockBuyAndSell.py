@@ -19,3 +19,15 @@ def Func(arr, si, ei):
                 res = max(curr, res)
     
     return res
+
+# Efficient Solution
+# If stock prices are going down let them go down until we reach the peak point.
+# If stock prices are going high let them go high until we reach the peak point.
+
+def profit(arr):
+    res = 0
+    for i in range(len(arr)):
+        if arr[i] > arr[i-1]:
+            res += arr[i] - arr[i-1] # Making a cummulative profit
+    
+    return res
