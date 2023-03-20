@@ -14,6 +14,6 @@ def func(arr):
         for j in range(i+1, l):
             rightMax = max(rightMax, arr[j])
         
-        res = res + (min(leftMax, rightMax) - arr[i])
+        res = res + (min(leftMax, rightMax) - arr[i]) # This will reduce the extra space above ground that is taken by the bar in a region where the water it trapped
     
     return res
