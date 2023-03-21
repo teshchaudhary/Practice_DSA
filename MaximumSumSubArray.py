@@ -18,5 +18,22 @@ def func1(arr):
     
     return res
 
-arr = [1, -2, 3, -1, 2]
-print(func1(arr))
+# arr = [1, -2, 3, -1, 2]
+# print(func1(arr))
+
+#  O(n)
+# We check the maximum which is ending with precious element
+# maxNum(i) = max(maxNum(i-1)+arr[i], arr[i])
+
+def maxSum(arr):
+    res = arr[0]
+    maxEnd = arr[0]
+
+    for i in range(1, len(arr)):
+        maxEnd = max(maxEnd+arr[i], arr[i])
+        res = max(maxEnd, res)
+    
+    return res
+
+arr = [-3,8,-2,4,-5,6]
+print(maxSum(arr))
