@@ -28,7 +28,8 @@ def func1(arr):
 def maxSum(arr):
     res = arr[0]
     maxEnd = arr[0]
-
+    
+    # Either we can make maxEnding as the sum of elements up to the current element or we can start a new subarray starting from that element
     for i in range(1, len(arr)):
         maxEnd = max(maxEnd+arr[i], arr[i])
         res = max(maxEnd, res)
