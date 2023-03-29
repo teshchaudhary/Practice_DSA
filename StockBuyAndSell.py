@@ -26,7 +26,7 @@ def Func(arr, si, ei):
 
 def profit(arr):
     res = 0
-    for i in range(len(arr)):
+    for i in range(1, len(arr)):
         if arr[i] > arr[i-1]:
             res += arr[i] - arr[i-1] # Making a cummulative profit
     
