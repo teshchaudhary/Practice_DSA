@@ -24,7 +24,7 @@ def Func(arr, si, ei):
 # If stock prices are going down let them go down until we reach the peak point.
 # If stock prices are going high let them go high until we reach the peak point.
 
-def profit(arr):
+def Func(arr):
     res = 0
     for i in range(1, len(arr)):
         if arr[i] > arr[i-1]:
