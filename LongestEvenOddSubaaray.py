@@ -21,6 +21,7 @@ def func0(arr):
 
 # Efficient Solution
 # Kadane's Algorithm
+# O(n)
 
 def func1(arr):
     res = 1
