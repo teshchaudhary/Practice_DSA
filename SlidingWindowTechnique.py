@@ -22,6 +22,7 @@ def func(arr, k):
 
 # Sliding Window Technique
 # Nullify the effect of the element to be left and add the new element
+# Theta(n)
 
 def func(arr, k):
 
