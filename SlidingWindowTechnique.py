@@ -1,3 +1,8 @@
+# Take k elements at a time and get the largest sum from all these pairs
+
+# Naive Solution
+# O(n*k)
+
 def func(arr, k):
     res = float('-inf')
     l = len(arr)
@@ -14,3 +19,30 @@ def func(arr, k):
     return res
 
 # print(func([10,5,-2,20,1],3))
+
+# Sliding Window Technique
+# Nullify the effect of the element to be left and add the new element
+# O(n)
+
+def func(arr, k):
+
+    l = len(arr)
+
+    res = float('-inf')
+    curr_sum = 0
+    for i in range(k):
+        curr_sum += arr[i]
+
+    res = max(res, curr_sum)
+    si = 0
+    ei = k
+
+    while ei < l:
+        curr_sum = curr_sum + arr[ei] - arr[si]
+        res = max(res, curr_sum)
+        si += 1
+        ei += 1
+    
+    return res
+
+# print(func([1,8,30,-5,20, 7], 4))
