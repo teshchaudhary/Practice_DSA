@@ -22,7 +22,6 @@ def func(arr, k):
 
 # Sliding Window Technique
 # Nullify the effect of the element to be left and add the new element
-# O(n)
 
 def func(arr, k):
 
@@ -46,3 +45,19 @@ def func(arr, k):
     return res
 
 # print(func([1,8,30,-5,20, 7], 4))
+
+
+# Less LOC
+
+def func(arr, k):
+    curr_sum = 0
+    for i in range(k):
+        curr_sum += arr[i]
+
+    res = curr_sum
+
+    for i in range(k, len(arr)):
+        curr_sum = curr_sum + arr[i] - arr[i-k]
+        res = max(res, curr_sum)
+
+    return res
