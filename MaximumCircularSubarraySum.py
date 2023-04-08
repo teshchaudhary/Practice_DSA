@@ -13,6 +13,7 @@ def normalMaxSum(arr):
 # The intution is to find the minmum sum of the subarray
 # To get this all we need is to invert all the elements' sign and then get the maximum sum of the subarray
 
+# The maximum circular subarray sum will be the total sum of the array subtracted by the maximum sum of the innverted elements of the array
 
 def OverallMaxSum(arr):
     max_normal = normalMaxSum(arr)
@@ -23,11 +24,12 @@ def OverallMaxSum(arr):
     # Circular Sum
     arr_sum = 0
 
-    # This will give the maximum subset sum of the inverted array
+    
     for i in range(len(arr)):
         arr_sum += arr[i]
         arr[i] = -arr[i]
 
-    max_circular = arr_sum + max_normal
+
+    max_circular = arr_sum - normalMaxSum(arr)
 
     return max(max_circular, max_normal)
