@@ -24,12 +24,11 @@ def OverallMaxSum(arr):
     # Circular Sum
     arr_sum = 0
 
-    
     for i in range(len(arr)):
         arr_sum += arr[i]
         arr[i] = -arr[i]
 
 
-    max_circular = arr_sum - normalMaxSum(arr)
+    max_circular = arr_sum + normalMaxSum(arr)
 
     return max(max_circular, max_normal)
