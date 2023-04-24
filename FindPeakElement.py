@@ -1,4 +1,6 @@
-def findPeak(arr, n) :
+#Naive Solution
+
+def func0(arr, n) :
 
 	if (n == 1) :
 	    return arr[0]
@@ -12,3 +14,24 @@ def findPeak(arr, n) :
 			return arr[i]
     
     
+# Efficient Solution
+
+def func1(arr, n):
+
+	l = 0
+	r = n-1
+	
+	while(l <= r):
+
+		mid = (l + r) // 2
+
+		if((mid == 0 or arr[mid - 1] <= arr[mid]) and (mid == n - 1 or arr[mid + 1] <= arr[mid])):
+			break
+
+		if(mid > 0 and arr[mid - 1] > arr[mid]):
+			r = mid - 1
+
+		else:
+			l = mid + 1
+
+	return mid
