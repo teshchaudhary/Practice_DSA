@@ -1,4 +1,6 @@
 # This will give -1 in case if array is not sorted and rotated as well
+# Eg: arr = [10, 20, 40, 6, 5, 8]
+# In this case string is not rotated and sorted properly so for searching element 6 it will give -1
 
 def func(arr, ele):
     si = 0
