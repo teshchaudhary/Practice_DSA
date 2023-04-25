@@ -1,3 +1,5 @@
+# This will give -1 in case if array is not sorted and rotated as well
+
 def func(arr, ele):
     si = 0
     ei = len(arr) - 1
