@@ -6,7 +6,7 @@ def func(arr, target_sum):
     i = 0
     j = l - 1
 
-    while i != j:
+    while i < j:
 
         # In sorted array of the sum is more than target sum then the values at last side will give more values with others
         if arr[i] + arr[j] > target_sum:
