@@ -1,4 +1,5 @@
 # Check if a pair makes the target sum when added in a sorted array
+# This technique works well only with sorted array if we want to use it we need to sort the array first
 # O(n)
 
 def func(arr, target_sum):
