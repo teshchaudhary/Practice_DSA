@@ -29,3 +29,26 @@ def func(arr,n):
 
 arr = [1, 2, 2, 3, 4, 5]
 print(func(arr, 6))
+
+# If we want 0 to be included as well then
+def func(arr,n):
+    slow = arr[0] + 1
+    fast = arr[0] + 1
+
+    slow = arr[slow] + 1
+    fast = arr[arr[fast] + 1]
+
+    while slow != fast:
+        slow = arr[slow] + 1
+        fast = arr[arr[fast] + 1]
+    
+    slow = arr[0] + 1
+
+    while slow != fast:
+        slow = arr[slow] + 1
+        fast = arr[fast] + 1
+    
+    return fast - 1 # We can return slow as well
+
+arr = [0, 1, 2, 2, 3, 4, 5]
+print(func(arr, 7))
