@@ -1,0 +1,20 @@
+def reverse(arr,si,ei):
+    while si <= ei:
+        arr[si], arr[ei] = arr[ei], arr[si]
+        si += 1
+        ei -= 1
+
+def reverseInGroups(arr, N, K):
+    l = len(arr)
+    las = N % K
+    si = 0
+    ei = K
+    while ei <= l:
+        reverse(arr, si, ei-1)
+        si += K
+        ei += K
+
+    if las != 0:
+        reverse(arr,si,l-1)
+    
+    return arr
