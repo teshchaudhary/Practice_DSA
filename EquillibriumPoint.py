@@ -19,3 +19,19 @@ def func1(arr):
 
 arr = [3,4,8,-9,9,7]
 print(func1(arr))
+
+#O(n)
+
+def func2(arr):
+    tSum = sum(arr)
+    lSum = 0
+
+    for i in range(len(arr)):
+        lSum += arr[i]
+
+        if lSum == tSum:
+            return i+1
+
+        tSum -= arr[i]
+
+    return -1
