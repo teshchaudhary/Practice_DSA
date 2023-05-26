@@ -15,7 +15,7 @@ def printkth(root, k, l):
     printkth(root.left, k-1,l)
     printkth(root.right, k-1, l)
 
-def traversal(head):
+def traversal(root):
   h = height(root)
   for i in range(h):
     printkth(root,i,[])
