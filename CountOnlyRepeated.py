@@ -31,3 +31,13 @@ def findRepeating(arr, n):
     else:
         count = n - (arr[n-1] - arr[0])
         return [element, count]
+
+
+# We can replace the condition for where to go (left of right) by
+
+# Check if the repeating element is in the left half
+# if arr[mid] - arr[low] >= mid - low:
+#     high = mid - 1
+# Check if the repeating element is in the right half
+# else:
+#     low = mid + 1
