@@ -19,3 +19,17 @@ def leftmost2(st) :
             return i 
         
     return -1 
+
+# O(n)
+def leftmost3(st):
+    vis = [False]*26
+
+    for i in range(len(st)) :
+        if vis[ord(st[i] - 97)] == True:
+            return i
+        
+        else:
+            vis[ord(st[i] - 97)] = True
+    
+    return -1
+
