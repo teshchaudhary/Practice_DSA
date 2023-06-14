@@ -10,7 +10,7 @@ def leftmost1(str):
 
 # O(n)
 def leftmost2(st) :
-    count = [0] * 96
+    count = [0] * 26
     for i in range(len(st)) :
         count[ord(st[i] - 97)] += 1 
 
@@ -32,4 +32,24 @@ def leftmost3(st):
             vis[ord(st[i] - 97)] = True
     
     return -1
+
+# O(n)
+
+def leftmost4(st):
+    fIndex = [-1] * 26
+    res = float['inf']
+
+    for i in range(len(st)):
+        if fIndex[ord(i) - 97] != -1:
+            fIndex[ord(i) - 97] = i
+        
+        else:
+            res = min(res, fIndex[ord(i) - 97])
+
+    if res != float['inf']:
+        return res
+    
+    else:
+        return -1
+    
 
