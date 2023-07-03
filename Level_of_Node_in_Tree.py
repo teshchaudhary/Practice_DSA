@@ -30,3 +30,16 @@ def FindLevel(N):
 
     else:
         return i
+
+
+# Effective Solution
+
+def FindLevel(self,N):
+      level = 0
+      curr = 1
+      total = 0
+      while total<N:
+          level += 1
+          curr *= level
+          total += curr
+      return level  
