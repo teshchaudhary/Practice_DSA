@@ -1,3 +1,6 @@
+# Kahn's Algorithm
+# This can also be used to detect if there is a cycle in the graph
+
 from collections import defaultdict
 
 class Graph:
