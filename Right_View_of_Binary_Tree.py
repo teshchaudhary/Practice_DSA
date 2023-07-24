@@ -1,3 +1,4 @@
+# Naive Solution with much extra space
 def rightView(root):
         res = []
         res_ = []
@@ -30,3 +31,34 @@ def rightView(root):
             res_.clear()
         
         return res
+
+
+# Better Solution
+
+from collections import deque
+def RightView(root):
+    if root is None:
+        return []
+    
+    res = []
+    q = deque()
+    q.append(root)
+
+    while q:
+        size = len(q)
+        i = 0'
+            
+        while i < size:
+            curr = q.popleft()
+            i = i + 1
+        
+            # To get the right most element of the level
+            if i == size:
+                res.append(curr.data)
+
+            if curr.left:
+                q.append(curr.left)
+
+            if curr.right:
+                q.append(curr.right)
+    return res 
