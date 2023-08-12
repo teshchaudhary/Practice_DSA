@@ -55,6 +55,13 @@ def qSortl(arr, l, h):
         qSortl(arr, p + 1, h)
 
 
+# Remove Tail Recursion
+def qSorth_(arr, l, h):
+    while l < h:
+        p = hoarsePartition(arr, l, h)
+        qSort(arr, l, p)
+        l = p + 1
+        
 arr = [8, 4, 7, 9, 3, 10, 5]
 qSorth(arr, 0, 6)
 print(arr)
