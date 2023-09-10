@@ -4,8 +4,7 @@ def maxguests(arrivals,departures):
     arrivals.sort()
     departures.sort()
 
-    res = 0
-    curr = 0
+    curr = res = 0
     # i is one because the first arrival time will be lesser than or equal to the first departure time
     i, j = 1, 0
     while (i < len(arrivals) and j < len(departures)):
