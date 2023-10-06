@@ -1,4 +1,4 @@
-def rearrange(self, head):
+def rearrange(head):
         r1 = []
         r2 = []
         
