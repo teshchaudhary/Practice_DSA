@@ -1,3 +1,7 @@
+"""Given a grid of size n*m (n is the number of rows and m is the number of columns in the grid) consisting of '0's (Water) and '1's(Land). Find the number of islands.
+
+Note: An island is either surrounded by water or boundary of grid and is formed by connecting adjacent lands horizontally or vertically or diagonally i.e., in all 8 directions."""
+
 from collections import deque
 
 def bfs(row, col, adj, visited):
@@ -14,6 +18,15 @@ def bfs(row, col, adj, visited):
                 nrow = row + delrow
                 ncol = col + delcol
 
+                # Moving in all 8 directions
+                # row, col - 1
+                # row, col + 1
+                # row - 1, col - 1
+                # row - 1, col
+                # row - 1, col + 1
+                # row + 1, col - 1
+                # row + 1, col
+                # row +1, col + 1
                 if (nrow >= 0 and nrow < rows) and \
                     (ncol >= 0 and ncol < columns) and \
                     adj[nrow][ncol] == 1 and \
