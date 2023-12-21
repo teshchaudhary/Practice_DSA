@@ -1,0 +1,11 @@
+def minCandy(N, ratings):
+    res = [1]*N
+    for i in range(1,N):
+        if ratings[i]>ratings[i-1]:
+            res[i] = res[i-1]+1
+            
+    for i in range(N-2,-1,-1):
+        if ratings[i]>ratings[i+1] and res[i]<=res[i+1]:
+            res[i] = res[i+1]+1
+            
+    return sum(res)
