@@ -45,5 +45,5 @@ def mergeSort(arr, l, r): # Stable
 
 arr = [9,8,1,5,3,4]
 
-mergeSort(arr, 0, 4)
+mergeSort(arr, 0, 5)
 print(arr)
