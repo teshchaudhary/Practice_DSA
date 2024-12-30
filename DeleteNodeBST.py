@@ -1,4 +1,8 @@
-def getEle(root):
+# InOrder Successor of the node to be deleted.
+# i.e. the nearest greater node of the node to be deleted.
+# We can also pick the nearest smaller node of the node to be deleted.
+
+def inOrderSuccessor(root):
     while root.left != None:
         root = root.left
     
@@ -23,7 +27,7 @@ def deleteNode(root, X):
             return root.right
         
         else:
-            ele = getEle(root.right)
+            ele = inOrderSuccessor(root.right)
             root.data = ele
             root.right = deleteNode(root.right, ele)
     
