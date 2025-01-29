@@ -47,5 +47,16 @@ def power(m, n):
 
     return res
 
-
-print(power(2, 10))
+# Also Handles the negative powers
+def negation_handled_power(m, n):
+    res = 1
+    negative_exponent = n < 0
+    n = abs(n)
+    while n:
+        if n & 1:
+            res *= m
+        
+        m *= m
+        n >>= 1
+    
+    return 1/res if negative_exponent else res
